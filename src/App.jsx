@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Form1 from "./assets/form/form1";
-import Form2 from "./assets/form/Form2";
-import Form3 from "./assets/form/Form3";
-import Form4 from "./assets/form/Form4";
+import StepperForm1 from "./assets/form/Form1";
+import StepperForm2 from "./assets/form/Form2";
+import StepperForm3 from "./assets/form/Form3";
+import StepperForm4 from "./assets/form/Form4";
 import emailjs from "@emailjs/browser";
 
 const App = () => {
@@ -165,10 +165,14 @@ const App = () => {
 
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
           {num === 1 && (
-            <Form1 onChange={handleInput} values={data} onClick={handleNext} />
+            <StepperForm1
+              onChange={handleInput}
+              values={data}
+              onClick={handleNext}
+            />
           )}
           {num === 2 && (
-            <Form2
+            <StepperForm2
               onChange={handleInput}
               values={data}
               onNext={handleNext}
@@ -176,7 +180,7 @@ const App = () => {
             />
           )}
           {num === 3 && (
-            <Form3
+            <StepperForm3
               onChange={handleInput}
               values={data}
               onNext={handleNext}
@@ -184,7 +188,7 @@ const App = () => {
             />
           )}
           {num === 4 && (
-            <Form4
+            <StepperForm4
               onChange={handleInput}
               onPrevious={handlePrevious}
               onSubmit={submitHander}
